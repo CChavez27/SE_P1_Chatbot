@@ -12,10 +12,13 @@ Sigue estos pasos para instalar las bibliotecas necesarias:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+   https://github.com/CChavez27/SE_P1_Chatbot.git
 
-1. **Instala las librerías requeridas:**
+2. **Instala las librerías requeridas:**
    ```bash
    pip install fuzzywuzzy[speedup]
    pip install spacy
+   
+2. **Descarga el modelo de lenguaje de spaCy:**
+   ```bash
+   python -m spacy download en_core_web_sm
