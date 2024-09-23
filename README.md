@@ -12,7 +12,9 @@ Sigue estos pasos para instalar las bibliotecas necesarias:
 
 1. **Clona el repositorio:**
    ```bash
-   https://github.com/CChavez27/SE_P1_Chatbot.git
+   git clone [https://github.com/tu_usuario/tu_repositorio.git](https://github.com/CChavez27/SE_P1_Chatbot.git)
+   cd tu_repositorio
+
 
 2. **Instala las librerías requeridas:**
    ```bash
