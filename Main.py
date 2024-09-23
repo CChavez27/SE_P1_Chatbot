@@ -56,7 +56,7 @@ def chatbot():
 
     while True:
         # Pregunta del usuario y se guarda en la variable question
-		question = input("Tú: ")
+        question = input("Tú: ")
 
         if question.lower() == 'salir':
             print("¡Adiós!")
