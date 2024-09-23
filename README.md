@@ -14,3 +14,8 @@ Sigue estos pasos para instalar las bibliotecas necesarias:
    ```bash
    git clone https://github.com/tu_usuario/tu_repositorio.git
    cd tu_repositorio
+
+1. **Instala las librerías requeridas:**
+   ```bash
+   pip install fuzzywuzzy[speedup]
+   pip install spacy
