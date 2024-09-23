@@ -23,10 +23,8 @@ Sigue estos pasos para instalar las bibliotecas necesarias:
    ```bash
    python -m spacy download en_core_web_sm
 
-Uso
-Una vez que hayas instalado las bibliotecas, puedes ejecutar el código principal con el siguiente comando:
+# Uso
 
-bash
-Copiar código
-python Main.py
-El chatbot comenzará y podrás interactuar con él. Escribe "salir" en cualquier momento para terminar la conversación.
+   Una vez que hayas instalado las bibliotecas, puedes ejecutar el código principal (main.py)
+   
+   El chatbot comenzará y podrás interactuar con él. Escribe "salir" en cualquier momento para terminar la conversación.
