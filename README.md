@@ -4,7 +4,7 @@ Este es un chatbot simple que utiliza `fuzzywuzzy` y `spaCy` para aprender nueva
 
 ## Requisitos
 
-Antes de ejecutar el proyecto, asegúrate de tener instalado Python en tu sistema. Este proyecto ha sido probado con Python 3.x.
+Antes de ejecutar el proyecto, asegúrate de tener instalado Python en tu sistema. Este proyecto ha sido probado con Python 3.12.
 
 ## Instalación
 
