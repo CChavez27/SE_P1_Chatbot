@@ -6,8 +6,10 @@ import os
 # Inicializamos el modelo de lenguaje de spaCy
 nlp = spacy.load('en_core_web_sm')
 
+# Archivo donde almacenaremos las preguntas y respuestas
 DB_FILE = 'chatbot_db.json'
 
+# Función para cargar la base de datos o crear una nueva
 def load_database():
     if os.path.exists(DB_FILE):
         with open(DB_FILE, 'r') as file:
@@ -15,6 +17,7 @@ def load_database():
     else:
         return {}
 
+# Función para guardar la base de datos
 def save_database(database):
     with open(DB_FILE, 'w') as file:
         json.dump(database, file, indent=4)
@@ -38,17 +41,22 @@ def get_response(database, question):
     else:
         return None
 
+# Función para agregar una nueva pregunta y respuesta a la base de datos
 def add_knowledge(database, question, answer):
     preprocessed_question = preprocess_text(question)
     database[preprocessed_question] = answer
     save_database(database)
 
+# Chatbot aqui inicia
 def chatbot():
     print("Chatbot iniciado. Escribe 'salir' para terminar el chat.")
+    
+	# Cargar la base de datos
     database = load_database()
 
     while True:
-        question = input("Tú: ")
+        # Pregunta del usuario y se guarda en la variable question
+		question = input("Tú: ")
 
         if question.lower() == 'salir':
             print("¡Adiós!")
@@ -61,7 +69,9 @@ def chatbot():
             print(f"Chatbot: {response}")
         else:
             print("Chatbot: No tengo una respuesta para eso.")
+			# Preguntar al usuario por una respuesta
             new_answer = input("¿Cuál sería una respuesta adecuada para esta pregunta?: ")
+			 # Agregar la nueva pregunta y respuesta a la base de datos
             add_knowledge(database, question, new_answer)
             print("Chatbot: ¡Gracias! He aprendido algo nuevo.")
 
