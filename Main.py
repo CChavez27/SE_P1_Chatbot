@@ -36,7 +36,7 @@ def get_response(database, question):
     # Usamos fuzzywuzzy para buscar la coincidencia más cercana
     best_match, score = process.extractOne(preprocessed_question, questions)
     
-    if score > 70:  # Umbral de coincidencia
+    if score > 5:  # Umbral de coincidencia
         return database[best_match]
     else:
         return None
